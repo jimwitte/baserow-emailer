@@ -1,0 +1,7 @@
+BASEROW_URL=<baserow url>
+BASEROW_API_TOKEN=<token>
+
+CLIENT_ID=<client ID>
+TENANT_ID=<tenant ID>
+
+CONFIG_TABLE_ID=<configTableID>

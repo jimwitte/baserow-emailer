@@ -1,0 +1,5 @@
+msal
+python-dotenv
+baserowapi
+requests
+jinja2
