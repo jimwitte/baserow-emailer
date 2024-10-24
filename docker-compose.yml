@@ -1,0 +1,20 @@
+services:
+  app:
+    image: ghcr.io/jimwitte/baserow-emailer:latest
+    volumes:
+      - ${PWD}/token_cache.bin:/app/token_cache.bin
+    restart: no
+    env_file: .env
+    environment:
+      - BASEROW_URL
+      - BASEROW_API_TOKEN
+      - CLIENT_ID
+      - TENANT_ID
+      - CONFIG_TABLE_ID
+    networks:
+      - web
+networks:
+  web:
+    ipam:
+      config:
+        - subnet: 192.168.201.0/24
