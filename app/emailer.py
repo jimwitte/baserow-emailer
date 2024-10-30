@@ -219,7 +219,7 @@ def process_emailer_config(baserow, configuration, access_token):
 
             # Send the email
             try:
-                send_email(access_token=access_token, subject=subject, recipients=recipients, body=body, cc_recipients=cc_recipients)
+                send_email(access_token=access_token, subject=subject, recipients=recipients, body=body, cc=cc_recipients)
                 logger.info(f"Email sent to {recipients} for row ID {row.id}.")
             except Exception as e:
                 logger.error(f"Failed to send email for row ID {row.id}: {e}")
